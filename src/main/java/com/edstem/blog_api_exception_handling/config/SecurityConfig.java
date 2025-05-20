@@ -20,7 +20,7 @@ public class SecurityConfig {
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http
 				.authorizeHttpRequests(auth -> auth
-						.requestMatchers("/books/**").authenticated()
+						.requestMatchers("/posts/**").authenticated()
 						.anyRequest().permitAll()
 				)
 				.httpBasic(Customizer.withDefaults())
